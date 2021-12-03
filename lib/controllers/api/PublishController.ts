@@ -18,7 +18,7 @@ class PublishController {
     const vhost = process.env.RABBITMQ_VHOST || '%2F'
     const exchange = process.env.RABBITMQ_EXCHANGE as string
     const routingKey = process.env.RABBITMQ_ROUTING_KEY as string
-    const rabbitmqUrl = process.env.RABBITMQ_URL as string
+    const rabbitmqUrl = `${process.env.RABBITMQ_HOSTNAME}:${process.env.RABBITMQ_PORT || 5672}`
 
     const bodyJson = JSON.stringify({
       routing_key: routingKey,

@@ -17,7 +17,8 @@ docker run -d --name rabbitmq-docker \
   -e RABBITMQ_EXCHANGE='rabbitmq-exchange' \
   -e RABBITMQ_ROUTING_KEY='rabbitmq-routingkey' \
   -e RABBITMQ_VHOST='%2F' \
-  -e RABBITMQ_URL='http://localhost:15672' \
+  -e RABBITMQ_HOSTNAME='localhost' \
+  -e RABBITMQ_PORT=15672 \
   -e RABBITMQ_QUEUE='rabbitmq-queue' \
   -e RABBITMQ_USER='rabbitmq-user' \
   -e RABBITMQ_PASSWORD='rabbitmq-pass' \
