@@ -20,20 +20,20 @@ jobs:
       - run: yarn lint
 
       - name: Log in to Docker Hub
-        uses: docker/login-action@1.10.0
+        uses: docker/login-action
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@3.6.1
+        uses: docker/metadata-action
         with:
           images: luutruong/rabbitmq-node-worker:latest
           tags: |
             type=sha
       
       - name: Build and push Docker image
-        uses: docker/build-push-action@2.7.0
+        uses: docker/build-push-action
         with:
           context: .
           push: true
