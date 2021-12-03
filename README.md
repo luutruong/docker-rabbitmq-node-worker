@@ -21,6 +21,7 @@ docker run -d --name rabbitmq-docker \
   -e RABBITMQ_QUEUE='rabbitmq-queue' \
   -e RABBITMQ_USER='rabbitmq-user' \
   -e RABBITMQ_PASSWORD='rabbitmq-pass' \
+  -e API_KEY='api-key' \
   -p 3000:3000 \
   rabbitmq-docker
 ```
