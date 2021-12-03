@@ -15,7 +15,7 @@ setupWorker(
     username: process.env.RABBITMQ_USER,
     password: process.env.RABBITMQ_PASSWORD,
     hostname: process.env.RABBITMQ_HOSTNAME,
-    port: parseInt(process.env.RABBITMQ_PORT as string, 10) || 5672,
+    port: parseInt(process.env.RABBITMQ_SOCKET_PORT as string, 10) || 5672,
   },
   {
     queue,
