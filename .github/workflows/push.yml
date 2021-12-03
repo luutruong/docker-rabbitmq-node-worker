@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: luutruong/rabbitmq-node-worker:latest
+          images: luutruong/rabbitmq-node-worker
           tags: |
             type=sha
       
